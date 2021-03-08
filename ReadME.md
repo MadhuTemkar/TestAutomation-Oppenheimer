@@ -1,24 +1,23 @@
-#run below commad in project directory 
-##To generate html report and automatically open it in a web browser, run the following command:
+# run below commad in project directory 
+## To generate html report and automatically open it in a web browser, run the following command:
 ________________________________________________________________________________________________________________________
 
     mvn clean test -D maven.test.failure.ignore=true allure:report 
 
-	mvn allure:serve
+    mvn allure:serve
 __________________________________________________________________________________________
-##Run the following command to open the generated reports in browser.
+## Run the following command to open the generated reports in browser.
 __________________________________________________________________________________________
-mvn clean test -Dmaven.test.failure.ignore=true allure:report  allure:serve
-
-___________________________________________________________________________________________
-##Run test case by tag name
+	mvn clean test -Dmaven.test.failure.ignore=true allure:report  allure:serve
+____________________________________________________________________________________
+## Run test case by tag name
 __________________________________________________________________________________________
 
-mvn  test -D groups=calculator,health -D maven.test.failure.ignore=true allure:report  allure:serve
+ mvn  test -D groups=calculator,health -D maven.test.failure.ignore=true allure:report  allure:serve
 
-mvn  test -D groups=functional -Dmaven.test.failure.ignore=true allure:report allure:serve
+ mvn  test -D groups=functional -Dmaven.test.failure.ignore=true allure:report allure:serve
 
-##Only selenium Test case run 
+## Only selenium Test case run 
 
 Step 1: Open pom.xml
 Step 2: un-comment below code  in pom.xml
